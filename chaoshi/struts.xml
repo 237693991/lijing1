@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="struts2" extends="struts-default">
+		<action name="login" class="com.hbgydx.struts.action.LoginAction" method="loginexecute">
+			<result name="success" type="redirectAction">weiboall.action</result>
+			<result name="error">/LoginError.jsp</result>
+		</action>
+		<action name="register" class="com.hbgydx.struts.action.RegisterAction" method="registerexecute">
+			<result name="success">/registerSuccess.jsp</result>
+			<result name="error">/registerError.jsp</result>
+		</action>
+		<action name="findall" class="com.hbgydx.struts.action.LoginAction" method="findAll">
+			<result name="success">/myfriend.jsp</result>
+			<result name="error">/LoginError.jsp</result>
+		</action>
+		<action name="system" class="com.hbgydx.struts.action.UserAction" method="systemexecute">
+			<result name="success">/success.jsp</result>
+			<result name="error">/fault.jsp</result>
+		</action>
+		<action name="weiboall" class="com.hbgydx.struts.action.WebboAction" method="weiboAll">
+			<result name="success">/MyBlog.jsp</result>
+			<result name="error">/LoginError.jsp</result>
+		</action>
+		<action name="sendblog" class="com.hbgydx.struts.action.SendBlogAction" method="sendblogexecute">
+			<result name="success" type="redirectAction">/weiboall.action</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+	</package>
+
+</struts>     
